@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,6 +31,7 @@ public class Test {
         books.add(book9);
         books.add(book10);
 
+
 //        System.out.println(books.toString());
 //        System.out.println(books.size());
 
@@ -39,18 +44,17 @@ public class Test {
         System.out.println("Mang sau khi sap xep chen" + insertionSort(books));
         System.out.println("Mang sau khi sap xep noi bot" + bubbleSort(books));
 
-        System.out.println("Gia cua cuon sach co ten Think java" +binarySearch(books, 0, books.size()-1, "Think java"));
+        System.out.println("Gia cua cuon sach co ten Think java" + binarySearch(books, 0, books.size() - 1, "Think java"));
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap ten cuon sach can tim");
         String name = sc.nextLine();
-        for (Book book : books){
-            if (book.getName().equals(name)){
-                System.out.println("Gia cua cuon" +book.getName() + "la" +book.getPrice());
+        for (Book book : books) {
+            if (book.getName().equals(name)) {
+                System.out.println("Gia cua cuon" + book.getName() + "la" + book.getPrice());
             }
         }
         // listBook.add(0, book1.price );
-
 
     }
 
